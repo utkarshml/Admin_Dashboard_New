@@ -1,0 +1,31 @@
+
+
+@mixin Heading($fs , $fw , $case , $ls){
+   font-size: $fs;
+   font-weight: $fw;
+   text-transform: $case;
+   letter-spacing: $ls;
+}
+
+
+@mixin Flex ($dir , $jc , $ai , $w, $gap : 2px){
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jc;
+  align-items: $ai;
+  gap:  $gap;
+}
+
+@mixin Grid($columns,$row ,  $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $row;
+    gap: $gap;
+  }
+
+  @mixin posCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+  }

@@ -1,0 +1,6 @@
+@import "mixin";
+.admin-header {
+    @include Flex(row , space-around  ,center , unset , 0 );
+    height: 3rem;
+
+}

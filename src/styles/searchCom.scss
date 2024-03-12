@@ -1,0 +1,34 @@
+@import "mixin";
+
+    .search-bar-div {
+        height: 2.5rem;
+        display: flex;
+        width: 70%;
+        
+        position: relative;
+        > input {
+            
+            width: 100%;
+            height: 100%;
+           border-top:  none;
+           border-left: none;
+           border-right: none;
+           color: hsl(266, 33%, 41%);
+           border-bottom: 2px solid hsla(266, 33%, 41%, 0.431);
+            padding-left: 1rem;
+            &::placeholder{
+                color: hsl(266, 33%, 41%);
+            }
+            &:focus {
+                outline: none;
+                border-bottom: 2px solid hsl(266, 33%, 41%);
+            }
+        }
+        > .search-button {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            color: hsl(266, 33%, 41%);
+            transform: translateY(-50%);
+        }
+    }

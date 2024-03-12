@@ -1,0 +1,15 @@
+@import 'mixin';
+
+
+.double-bar-graph-container{
+   width: 60%;
+   min-height: 400px;
+   box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
+   border-radius: 10px;
+   padding: 1rem;
+   > h2 {
+    text-align: center;
+    margin-top: 0.6rem;
+    text-transform: uppercase;
+   }
+}

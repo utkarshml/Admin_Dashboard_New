@@ -1,0 +1,79 @@
+@import "mixin";
+
+
+
+  aside {
+      width: 100%;
+      box-shadow:-5px 2px 20px 5px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      z-index: 10;
+      overflow-y: auto;
+      overflow-x: hidden;
+      min-width: 200px;
+      @include Flex(column , unset ,unset,  start , 1rem);
+      > .heading {
+        font-size: 0.9rem;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+      > .admin-sidebar-ul > .admin-sidebar-li {
+        margin: 0.5rem 0;
+        border-radius: 5px;
+        font-weight: 500;
+      }
+      > .admin-sidebar-ul > .admin-sidebar-li > .admin-sidebar-a {
+        display: block;
+        color:inherit ;
+        width: 100%;
+        padding: 0.5rem 0.5rem;
+        height: 100%;
+        > svg {
+            margin-right: 0.5rem;
+        }
+      }
+ }
+
+
+.double-bar-graph-container{
+  width: 60%;
+  min-height: 400px;
+  box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
+  border-radius: 10px;
+  padding: 1rem;
+  > h2 {
+   text-align: center;
+   margin-top: 0.6rem;
+   text-transform: uppercase;
+  }
+}
+.genderChart {
+  width: 30%;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
+  position: relative;
+  > h2 {
+      text-align: center;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+  }
+  > svg {
+      @include posCenter();
+      height: 1.5rem;
+      width: 1.5rem;
+      top: 47%;
+  }
+}
+.transaction-table{
+  width: 60%;
+  height: 350px;
+  border-radius: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%); 
+  padding: 1rem;
+  &::-webkit-scrollbar {
+    display:  none;
+  }
+}
+

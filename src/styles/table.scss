@@ -1,0 +1,59 @@
+@import "mixin";
+
+
+ table {
+      width: 100%;
+      height: fit-content;
+      text-align: center;
+      border-spacing: 0;
+       > thead {
+        width: 100%;
+          > tr
+          > th {
+              width: fit-content;
+              padding: 1rem 0.5rem;
+              text-transform: uppercase;
+              font-weight: 600;
+              color:  hsl(266, 33%, 41%);
+              border-bottom: 1px solid hsla(266, 33%, 41%, 0.217);
+              border-spacing: 0;
+              min-width: 100px;
+          }
+       }
+       > tbody {
+        > tr {
+          > td {
+            padding: 0.7rem 0.5rem;
+            border-bottom:  1px solid hsla(266, 33%, 41%, 0.217);
+            min-width: 50px;
+          }
+        }
+       }
+    }
+    .pagination{
+      width:  fit-content;
+      padding: 1rem 2rem;
+      margin: 1.5rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      >span {
+        margin: 0 1rem;
+        width: 80px;
+        text-align: center;
+      }
+      > button {
+        padding:  0.5rem 1.5rem;
+        border: none;
+        border-radius:8px;
+        margin: 0.5rem;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+        &:disabled{
+          opacity: 0.5;
+        }
+      };
+    }

@@ -1,0 +1,28 @@
+@import "mixin";
+
+.category-bar{
+    padding: 0.5rem 0.5rem;
+    width: 90%;
+    height: fit-content;
+
+   >  span {
+        font-size: 13px;
+        font-weight: 600;
+        color: hsla(266, 33%, 41%, 0.663);
+    }
+    > .bar {
+        background-color: rgba(128, 128, 128, 0.358);
+        width: 100%;
+        border-radius: 5px;
+        margin: 10px 0;
+        height: 13px;
+       >  .bar-width{
+            background-color: hsl(266, 33%, 41%);
+            width:70%;
+            border-radius: 5px;
+            height: 100%;
+            transition: width  ease;
+        }
+    }
+}
+
