@@ -1,8 +1,9 @@
 import { ColumnDef } from "@tanstack/react-table"
 import AdminSideBar from "../../components/AdminSideBar"
 import Admin_header from "./Admin_header"
-import { ActionBtn } from "./Inventory"
 import GetTable from "../../components/Table"
+import ProductManagementBtn from "../../components/ProductManagementBtn"
+import { useState } from "react"
 
 interface TransactionColType {
   user: string,
@@ -43,7 +44,7 @@ const TransactionCol: ColumnDef<TransactionColType>[] = [
     header: "Action",
     accessorKey: "action",
     cell: () => {
-      return <ActionBtn text="manage" />
+      return <ProductManagementBtn text="manage" />
     }
   }
 ]
@@ -73,12 +74,19 @@ const TranDum: TransactionColType[] = [
 
 
 const Transaction = () => {
+  const[toggle , setToggle] = useState<boolean>(false);
+  const Handler = () =>{
+     setToggle(!toggle);
+  }
+  const onclose = () => {
+      setToggle(false);
+  }
   return (
     <>
       <div className="container">
-        <AdminSideBar />
+        <AdminSideBar onClose={onclose} reacted={toggle} />
         <main>
-          <Admin_header />
+          <Admin_header onClick={Handler} />
           <div style={{ padding: "2rem 1.5rem" }}>
             <h2 style={
               {

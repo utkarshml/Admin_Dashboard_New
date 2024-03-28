@@ -12,7 +12,7 @@ const Transaction = lazy(() => import("./pages/Admin/Transaction"))
 const App = () => {
   return (
     <Router>
-      <Suspense >
+      <Suspense fallback={<Loader/>} >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
@@ -23,6 +23,7 @@ const App = () => {
           <Route path="/admin/customer" element={<Customer />} />
           <Route path="/admin/inventory" element={<Inventory />} />
           <Route path="/admin/transaction" element={<Transaction />} />
+          <Route path="/admin/loader" element={<Loader />} />
         </Routes>
        </Suspense>
     </Router>

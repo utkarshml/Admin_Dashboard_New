@@ -5,10 +5,21 @@ import { RiCustomerService2Line } from "react-icons/ri";
 import { GrTransaction } from "react-icons/gr";
 import { MdInventory2 } from "react-icons/md";
 import { FaChartArea } from "react-icons/fa";
-function AdminSideBar() {
+import { RxCross2 } from "react-icons/rx";
+
+interface useToggleProp {
+  reacted : boolean,
+  onClose :()=> void 
+}
+function AdminSideBar({reacted , onClose} : useToggleProp) {
     const location = useLocation()
+
   return (
-    <aside>
+    <aside style={{left : reacted ? "0" : "-100%"}}>
+      <div  onClick={onClose} className="close-btn">
+      <RxCross2/>
+      </div>
+      
         <h2 className="admin-logo primary">Logo. </h2>
         <h5 className="dashboard-heading heading ">Dashboard</h5>
         <ul className="admin-sidebar-ul">

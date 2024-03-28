@@ -3,7 +3,6 @@ import Modal from "./Modal";
 import "../styles/ProductManagementBtn.scss";
 import { FixedCropper, FixedCropperRef, ImageRestriction } from 'react-advanced-cropper';
 import 'react-advanced-cropper/dist/style.css'
-// import { IoIosRedo, IoIosUndo } from "react-icons/io";
 type ActionBtnProp = {
     text : string,
    
@@ -12,7 +11,7 @@ type ActionBtnProp = {
 
    export const ProductManagementBtn =( {text } : ActionBtnProp) =>{
     const [open , setOpen] = useState<boolean>(false);
-    const cropperRef = useRef<FixedCropperRef | undefined>();
+    const cropperRef = useRef<FixedCropperRef | null>(null);
     const [productName , setProductName] = useState<string>();
     const [price , setPrice] = useState<number>();
     const [stock , setStock] = useState<number>();
@@ -36,7 +35,8 @@ type ActionBtnProp = {
       if (cropper) {
         const canvas = cropper.getCanvas();
         setPhoto(canvas?.toDataURL());
-        cropModal(true);
+        
+        cropModal(false);
       }
     };
     return (
@@ -48,12 +48,12 @@ type ActionBtnProp = {
         <div onClick={(e) => e.stopPropagation()} className="update-modal">
           <h2>Create Product</h2>
           <div className="modal-container">
-            <div className="photo-details">
+      {  photo &&    <div className="photo-details">
                 <div><h4>ID : jdkfdjfkdljfdkjf</h4></div>
               {photo  &&  <img src={photo} alt="Product Image" /> } 
                 <h4>Name</h4>
                 <h2>1000</h2>
-            </div>
+            </div>}
           
           <form action="post">
             <div className="input-box">

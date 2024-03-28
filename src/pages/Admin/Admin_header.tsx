@@ -1,13 +1,25 @@
 import { CgProfile } from "react-icons/cg";
 import '../../styles/admin_header.scss'
 import { IoNotifications } from "react-icons/io5";
-import Searchbar from "../../components/Searchbar";
-function Admin_header() {
+import { GiHamburgerMenu } from "react-icons/gi";
+interface IHamburgerMenu {
+  onClick: () => void;
+}
+function Admin_header({onClick} : IHamburgerMenu ) {
+
   return (
     <div className="admin-header">
-       <Searchbar/>
-       <IoNotifications/>
-       <CgProfile/>
+    <div onClick={onClick} className="handburger">
+    <GiHamburgerMenu/>
+    </div>
+  <button>
+  <IoNotifications/>
+  </button>
+  <button>
+  <CgProfile/>
+  </button>
+       
+    
     </div>
   )
 }

@@ -34,8 +34,9 @@
 
 .modal-body{
    > h2 { text-align: center;}
-   width: 80vw!important;
+   max-width: 80%!important;
    position: relative;
+   height: fit-content;
    min-width: 250px;
    z-index: 1000;
    border-radius: 10px;
@@ -49,27 +50,13 @@
        grid-template-rows: 1fr;
        grid-template-columns: 1fr 1fr;
        padding: 0.5rem 0;
-       .photo-details{
-        @include Flex(column , center , center , nowrap , 0px);
-           padding: 1rem;
-            div {
-               width: 100%;
-               padding: 0 1rem;
-               h4 { text-align: start; font-weight: 500;}}
-           img{
-               max-width: fit-content;
-               max-height: 400px;
-               height: 300px;
-               width: 400px;
-               border-radius: 8px;
-           }
-           h4{ text-transform: uppercase; font-weight: 400;}
-       }
    }
    form {
       width: 100%;
       margin: auto;
       padding: 0.5rem 0;
+
+      height: fit-content;
       .input-box {
          width: 100%;
          display: flex;
@@ -95,7 +82,9 @@
       }
       > input[type="file"] {
          border: none;    
-         cursor: pointer;         }
+         cursor: pointer;        
+       }
+  
    }
    .create-btn {
       margin:1rem  auto; 
@@ -109,6 +98,11 @@
       font-weight: 600;
       border-radius: 5px;
       }
+      .image-output{
+         width: fit-content;
+         height: fit-content;
+         margin: auto;
+         }
 }
 }
 @keyframes popEffect {

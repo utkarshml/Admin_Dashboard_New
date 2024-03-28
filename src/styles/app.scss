@@ -2,6 +2,7 @@
 @import "_mixin";
 @import "dashboard";
 @import "admin_header";
+@import "responsive";
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
+    width: 100%;
     &::-webkit-scrollbar {
 
         display: none;
@@ -44,7 +46,28 @@ li {
 
 .container{
     @include Grid(1.5fr 5fr ,1fr, 2rem);
-    width: 100%;
+    width: auto;
     min-height: 100vh;
 }
 
+.loader-parent{
+    width:18rem;
+    height:18rem;
+    @include posCenter;
+
+.loader {
+    width: 100%;
+    height: inherit;
+     border: 8px solid;
+     border-color: hsl(266, 33%, 41%)  hsl(266, 37%, 87%) ;
+     border-radius: 50%;
+     animation: round 1s linear infinite;
+}
+@keyframes round {
+    0% {
+        transform: rotateZ(0);
+      }
+      100% {
+        transform: rotateZ(360deg);
+      }
+    }}

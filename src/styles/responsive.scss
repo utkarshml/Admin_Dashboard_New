@@ -1,0 +1,25 @@
+@media screen and  (max-width:992px) {
+    .handburger{
+        position: absolute;
+        display: block  !important;
+        left: 2rem;
+        cursor: pointer;
+    }
+    .container{
+        display: block!important;
+        aside {
+            position: absolute;
+            width: 250px;
+            background-color: white;
+             height: 100vh;
+            transition: 0.4s ease-in-out;
+            .close-btn {
+                display: block;
+                width: fit-content;
+                position: absolute;
+                right: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

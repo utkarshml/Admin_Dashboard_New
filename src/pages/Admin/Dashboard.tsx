@@ -8,6 +8,7 @@ import { BiMaleFemale } from "react-icons/bi";
 import { ColumnDef } from "@tanstack/react-table"
 import GetTable from "../../components/Table"
 import { Data, data } from "../../assets/MOCK_DATA"
+import { useState } from "react"
 
 export const column : ColumnDef<Data>[] = [
   {
@@ -35,12 +36,19 @@ export const column : ColumnDef<Data>[] = [
 const label = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
 const Dashboard = () => {
-  return (
+  const[toggle , setToggle] = useState<boolean>(false);
+  const Handler = () =>{
+     setToggle(!toggle);
+  }
+  const onclose = () => {
+      setToggle(false);
+  }
+   return (
     <>
       <div className="container">
-        <AdminSideBar />
+        <AdminSideBar onClose={onclose} reacted={toggle} />
         <main>
-          <Admin_header />
+          <Admin_header onClick={Handler} />
           <WidgetContainer />
           <div style={{
             display: "flex",

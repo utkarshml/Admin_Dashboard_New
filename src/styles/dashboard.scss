@@ -3,6 +3,9 @@
 
 
   aside {
+    .close-btn{
+      display: none;
+    }
       width: 100%;
       box-shadow:-5px 2px 20px 5px rgba(0, 0, 0, 0.2);
       padding: 1rem;

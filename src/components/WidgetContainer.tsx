@@ -11,7 +11,7 @@ function WidgetContainer() {
         justifyContent : "space-around",
         alignItems : "center",
         margin : "0.5rem",
-        height : "200px"
+        height : "auto",
     }}>
       <Widgets title="Revenue" percentage={40} num={5000} trand={-30} color="hsl(266, 33%, 41%)"/>
       <Widgets title="User" percentage={20} num={5000} trand={-30} color="hsl(266, 33%, 41%)"/>

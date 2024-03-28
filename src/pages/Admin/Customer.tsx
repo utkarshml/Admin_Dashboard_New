@@ -1,11 +1,10 @@
 
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import AdminSideBar from "../../components/AdminSideBar";
 import GetTable from "../../components/Table";
 import Admin_header from "./Admin_header";
 import { ColumnDef } from "@tanstack/react-table";
-import { ActionBtn } from "./Inventory";
-
+import ProductManagementBtn from "../../components/ProductManagementBtn";
 interface CustomerColTye {
   id : string,
   profile : string,
@@ -46,8 +45,6 @@ const CustomerCol : ColumnDef<CustomerColTye>[] = [
     header : "Profile",
     accessorKey : "profile",
     cell: ( { cell}) => {
-      // value is the value of the property for this row
-      // You can return any JSX element here
       return <img style={{height  : "3.5rem" , width : "3.5rem" , borderRadius: "50%"}} src={cell.row.getValue("profile")} alt={cell.row.getValue("name")} />;
     },
   },
@@ -72,19 +69,24 @@ const CustomerCol : ColumnDef<CustomerColTye>[] = [
     header : "Action",
     accessorKey : "action",
     cell: () => {
-      // value is the value of the property for this row
-      // You can return any JSX element here
-      return <ActionBtn text="Delete"/>
+      return <ProductManagementBtn text="Delete"/>
     },
   },
 ]
 function Customer() {
+  const[toggle , setToggle] = useState<boolean>(false);
+  const Handler = () =>{
+     setToggle(!toggle);
+  }
+  const onclose = () => {
+      setToggle(false);
+  }
   return (
     <>
     <div className="container">
-       <AdminSideBar/>
+       <AdminSideBar onClose={onclose} reacted={toggle} />
       <main>
-      <Admin_header/>
+      <Admin_header onClick={Handler} />
       <div style={{
         padding: "2rem 1.5rem"
       }}>
