@@ -1,0 +1,71 @@
+@import "mixin";
+
+.back-btn {
+    background-color: none;
+    border: none;
+    color:  hsl(266, 33%, 41%);
+   margin-top: 1rem;
+   margin-left:  1rem;
+
+}
+.manage-btn {
+    width:4.5rem;
+    height : 2.4rem;
+    border : none ;
+    color : white ;
+    border-radius:8px;
+    cursor : pointer ;
+    a {
+      color : white;
+    }
+    background-color :   hsl(266, 33%, 41%);
+    &:hover {
+      background-color : hsl(266, 50%, 70%);
+    }
+}
+section{
+ @include Flex(column , center , center , unset  , 1rem);
+ width: 40%;
+.product-item-card{
+    margin: 1rem 0.5rem;
+    @include Flex(row , center , center  , unset ,unset);
+    h2{
+        text-align: center;
+    }
+    img {
+        height: 4rem;
+        width: 4rem;
+        object-fit: cover;
+        object-position:  center;
+    }
+    a {
+        margin:  0.5rem;
+    }
+    span {
+        margin-left: auto ;
+    }
+}
+}
+article {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    h4{
+        margin: 1rem 0;
+    }
+    span{
+        margin: 0.2rem 0;
+    }
+    button {
+        padding: 0.5rem 0;
+        background-color:    hsl(266, 33%, 41%);
+        color:  white;
+        border: none;
+        border-radius: 5px;
+        margin: 1rem 0.5rem;
+        cursor: pointer;
+        &:hover{
+            background-color: hsl(266, 50%, 70%);
+        }
+    }
+}
