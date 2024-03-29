@@ -4,7 +4,7 @@ import { LuLayoutDashboard } from "react-icons/lu";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { GrTransaction } from "react-icons/gr";
 import { MdInventory2 } from "react-icons/md";
-import { FaChartArea } from "react-icons/fa";
+import { FaChartArea, FaChartPie } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 
 interface useToggleProp {
@@ -28,11 +28,11 @@ function AdminSideBar({reacted , onClose} : useToggleProp) {
             <Li text="Inventory" url="/admin/inventory" location={location} Icon={MdInventory2}/>
             <Li text="Transaction" url="/admin/transaction" location={location} Icon={GrTransaction}/>
         </ul>
-        <h5 className="chart-heading  heading">Chart</h5>
+        <h5 className="chart-heading  heading">Analytics </h5>
         <ul className="admin-sidebar-ul">
             <Li text="charts" url="/admin/chart" location={location} Icon={FaChartArea}/>
-            <Li text="Inventory" url="/admin/inventory" location={location} Icon={MdInventory2}/>
-            <Li text="Transaction" url="/admin/transaction" location={location} Icon={GrTransaction}/>
+            <Li text="PI Chart" url="/admin/pi" location={location} Icon={FaChartPie}/>
+            
         </ul>
     </aside>
   )

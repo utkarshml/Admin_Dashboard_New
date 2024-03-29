@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 
-const WidgestDiv = styled.article`
+const WidgestDiv = styled.div`
   width : 15rem;
   height : 10rem;
   box-shadow :0 0 14px 1px hsl(266deg 33% 41% / 15%);
@@ -55,14 +55,14 @@ const WidgestDiv = styled.article`
 
 }
 `
-interface WidgestPro {
+interface WidgestProp {
     title : string,
     num : number,
     percentage : number,
     trand : number,
     color : string
 }
-function Widgets({title , num , percentage , trand , color} : WidgestPro) {
+function Widgets({title , num , percentage , trand , color} : WidgestProp) {
   const [progress , setProgress] = useState(0)
   useEffect(() => {
     const interval = setInterval(() => {

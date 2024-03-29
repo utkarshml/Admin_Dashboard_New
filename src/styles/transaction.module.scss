@@ -1,6 +1,6 @@
 @import "mixin";
 
-.back-btn {
+.backBtn {
     background-color: none;
     border: none;
     color:  hsl(266, 33%, 41%);
@@ -8,7 +8,7 @@
    margin-left:  1rem;
 
 }
-.manage-btn {
+.managebtn {
     width:4.5rem;
     height : 2.4rem;
     border : none ;
@@ -23,22 +23,21 @@
       background-color : hsl(266, 50%, 70%);
     }
 }
-section{
+.ManageSection{
  @include Flex(column , center , center , unset  , 1rem);
  width: 40%;
-.product-item-card{
-    margin: 1rem 0.5rem;
+.productItemCard{
     @include Flex(row , center , center  , unset ,unset);
-    h2{
+    .heading{
         text-align: center;
     }
-    img {
+    .ProductImage {
         height: 4rem;
         width: 4rem;
         object-fit: cover;
         object-position:  center;
     }
-    a {
+    .productLink {
         margin:  0.5rem;
     }
     span {
@@ -68,4 +67,13 @@ article {
             background-color: hsl(266, 50%, 70%);
         }
     }
+}
+
+.productList {
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
 }

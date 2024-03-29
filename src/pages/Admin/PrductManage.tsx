@@ -4,7 +4,7 @@ import AdminSideBar from "../../components/AdminSideBar"
 import { OrderItem, OrderItemType } from "../../types/OrderItemTypes"
 import Admin_header from "./Admin_header"
 import { useState } from "react"
-import "../../styles/transaction.scss"
+import styles from "../../styles/transaction.module.scss"
 import { FaArrowLeft } from "react-icons/fa"
 
 
@@ -64,13 +64,13 @@ const statusHandler = () =>{
         <AdminSideBar onClose={onclose} reacted={toggle} />
         <main>
           <Admin_header onClick={Handler} />
-          <button onClick={()=>window.history.back()} className="back-btn">
+          <button onClick={()=>window.history.back()} className={styles.backBtn}>
           <FaArrowLeft/>  Home
           </button>
-          <div style={{ padding: "2rem 1.5rem" }}>
+          <div className={styles.productList} style={{ padding: "2rem 1.5rem" }}>
      
-           <section>
-            <h2>Product Info</h2>
+           <section className={styles.ManageSection}>
+            <h2 className={styles.heading}>Product Info</h2>
             {order?.map(i=>(
               <ProductItem key={i._id} name={i.name} image={i.image} price={i.price} qty={i.qty} subtotal={i.subtotal} _id={i._id}/>
             ))}
@@ -102,9 +102,9 @@ const statusHandler = () =>{
 }
 
 const ProductItem = ({name , image , price , qty , subtotal , _id} : OrderItemType) =>(
-  <div className="product-item-card">
-    <img src={image} alt={name}/>
-    <Link to={`/prodcut/${_id}`}>{name}</Link>
+  <div className={styles.productItemCard}>
+    <img className={styles.ProductImage} src={image} alt={name}/>
+    <Link className={styles.productLink} to={`/prodcut/${_id}`}>{name}</Link>
     <span>{price} X {qty} = {subtotal}</span>
   </div>
 )

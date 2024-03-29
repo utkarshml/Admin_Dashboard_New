@@ -4,7 +4,7 @@ import Admin_header from "./Admin_header"
 import GetTable from "../../components/Table"
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import "../../styles/transaction.scss"
+import styles from "../../styles/transaction.module.scss"
 
 interface TransactionColType {
   user: string,
@@ -45,7 +45,7 @@ const TransactionCol: ColumnDef<TransactionColType>[] = [
     header: "Action",
     accessorKey: "action",
     cell: () => {
-      return <button  className="manage-btn" ><Link to={"/admin/transaction/manage"}>Manage</Link></button>
+      return <button  className={styles.managebtn} ><Link to={"/admin/transaction/manage"}>Manage</Link></button>
     }
   }
 ]

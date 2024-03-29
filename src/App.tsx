@@ -10,6 +10,8 @@ const Dashboard = lazy(() => import("./pages/Admin/Dashboard"));
 const Customer = lazy(() => import("./pages/Admin/Customer"));
 const Inventory = lazy(() => import("./pages/Admin/Inventory"));
 const Transaction = lazy(() => import("./pages/Admin/Transaction"))
+const Chartpage = lazy(() => import("./pages/Admin/Chartpage"))
+const PiChart = lazy(() => import("./pages/Admin/PiChart"))
 const App = () => {
   return (
     <Router>
@@ -26,7 +28,10 @@ const App = () => {
           <Route path="/admin/transaction" element={<Transaction />} />
           <Route path="/admin/loader" element={<Loader />} />
           <Route path="/admin/transaction/manage" element={<PrductManage/>}/>
+          <Route path="/admin/chart" element={<Chartpage/>}/>
+          <Route path="/admin/pi" element={<PiChart/>}/>
         </Routes>
+
        </Suspense>
     </Router>
   )
