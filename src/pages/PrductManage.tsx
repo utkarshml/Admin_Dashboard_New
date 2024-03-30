@@ -1,10 +1,10 @@
 
 import { Link } from "react-router-dom"
-import AdminSideBar from "../../components/AdminSideBar"
-import { OrderItem, OrderItemType } from "../../types/OrderItemTypes"
-import Admin_header from "./Admin_header"
+import AdminSideBar from "../components/AdminSideBar"
+import { OrderItem, OrderItemType } from "../types/OrderItemTypes"
+import Admin_header from "../components/Admin_header"
 import { useState } from "react"
-import styles from "../../styles/transaction.module.scss"
+import styles from "../styles/transaction.module.scss"
 import { FaArrowLeft } from "react-icons/fa"
 
 

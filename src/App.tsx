@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import { Suspense, lazy } from "react"
 import Loader from "./components/Loader";
-import PrductManage from "./pages/Admin/PrductManage";
+import PrductManage from "./pages/PrductManage";
 const Search = lazy(() => import("./pages/Search"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Home = lazy(() => import("./pages/Home"));
@@ -12,6 +12,8 @@ const Inventory = lazy(() => import("./pages/Admin/Inventory"));
 const Transaction = lazy(() => import("./pages/Admin/Transaction"))
 const Chartpage = lazy(() => import("./pages/Admin/Chartpage"))
 const PiChart = lazy(() => import("./pages/Admin/PiChart"))
+const UserManage = lazy(() => import("./pages/UserManage"))
+const AddProduct = lazy(() => import("./../src/pages/AddProduct"))
 const App = () => {
   return (
     <Router>
@@ -30,6 +32,8 @@ const App = () => {
           <Route path="/admin/transaction/manage" element={<PrductManage/>}/>
           <Route path="/admin/chart" element={<Chartpage/>}/>
           <Route path="/admin/pi" element={<PiChart/>}/>
+          <Route path="/admin/customer/user" element={<UserManage/>}/>
+          <Route path="/admin/inventory/add" element={<AddProduct/>}/>
         </Routes>
 
        </Suspense>

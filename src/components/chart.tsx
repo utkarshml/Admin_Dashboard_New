@@ -29,14 +29,15 @@ import {
     dataset_1 : number[],
     dataset_2 : number[], 
     lable_1 : string,
+    apr?: boolean,
     lable_2 : string,
     bgColor_1 : string,
     bgColor_2 : string,
   }
-  export function BarChart({ horizontal ,  dataset_1 , dataset_2 , lable_1 , lable_2 , bgColor_1 , bgColor_2  ,labels}: BarProp) {
+  export function BarChart({ apr, horizontal ,  dataset_1 , dataset_2 , lable_1 , lable_2 , bgColor_1 , bgColor_2  ,labels}: BarProp) {
     const options : ChartOptions<"bar"> = {
        responsive: true,
-       
+      maintainAspectRatio : apr,
        indexAxis : horizontal ? "y" : "x",
        plugins: {
          legend: {
@@ -68,12 +69,14 @@ import {
            backgroundColor:bgColor_1,
            
            barPercentage: 0.6, // Adjust this value to decrease the gap between bars
+           borderRadius   : 5
          },
          {
            label:  lable_2,
            data: dataset_2,
            backgroundColor: bgColor_2,
            barPercentage: 0.6, // Adjust this value to decrease the gap between bars
+           borderRadius : 5
          },
        ],
      };
@@ -131,10 +134,16 @@ import {
 export function LineChart({  dataset_1 , dataset_2 , lable_1 , lable_2 , bgColor_1 , bgColor_2  ,labels}: BarProp) {
   const options : ChartOptions<"line"> = {
      responsive: true,
-     
+     maintainAspectRatio : false ,
+     elements : {
+      line : {
+        tension : 0.5
+      }
+     },
      plugins: {
        legend: {
          position: 'top' as const,
+        
        },
       
      },
@@ -180,6 +189,6 @@ export type piProp =  {
    
    
    return (
-     <Pie data={data} />
+     <Pie options={{maintainAspectRatio : false , responsive : true}} data={data} />
    )
  }

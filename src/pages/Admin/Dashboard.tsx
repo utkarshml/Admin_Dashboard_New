@@ -1,7 +1,7 @@
 import AdminSideBar from "../../components/AdminSideBar"
 import WidgetContainer from "../../components/WidgetContainer"
 import "../../styles/dashboard.scss"
-import Admin_header from "./Admin_header"
+import Admin_header from "../../components/Admin_header"
 import CategoryBarContainer from "./CategoryBarContainer"
 import { BarChart, DoughnutGraph } from "../../components/chart"
 import { BiMaleFemale } from "react-icons/bi";

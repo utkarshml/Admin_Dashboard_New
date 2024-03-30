@@ -1,6 +1,6 @@
 import { ColumnDef } from "@tanstack/react-table"
 import AdminSideBar from "../../components/AdminSideBar"
-import Admin_header from "./Admin_header"
+import Admin_header from "../../components/Admin_header"
 import GetTable from "../../components/Table"
 import { useState } from "react"
 import { Link } from "react-router-dom"

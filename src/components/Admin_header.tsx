@@ -1,5 +1,5 @@
 import { CgProfile } from "react-icons/cg";
-import '../../styles/admin_header.scss'
+import styles from '../styles/admin_header.module.scss'
 import { IoNotifications } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 interface IHamburgerMenu {
@@ -8,14 +8,14 @@ interface IHamburgerMenu {
 function Admin_header({onClick} : IHamburgerMenu ) {
 
   return (
-    <div className="admin-header">
-    <div onClick={onClick} className="handburger">
+    <div className={styles["admin-header"]}>
+    <div onClick={onClick} className="handburger primary">
     <GiHamburgerMenu/>
     </div>
-  <button>
+  <button className={styles["notification-btn"]}>
   <IoNotifications/>
   </button>
-  <button>
+  <button className={styles["notification-btn"]}>
   <CgProfile/>
   </button>
        

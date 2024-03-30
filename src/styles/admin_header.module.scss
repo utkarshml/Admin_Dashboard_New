@@ -3,10 +3,12 @@
     @include Flex(row , flex-end  , center , unset , 0 );
     position: relative;
     height: 3rem;
+    // exist in app.scss
     .handburger {
-        display: none ;
+        display: none!important;
     }
-    button {
+    // end
+    .notification-btn {
         width: 6rem;
         border: none;
         background: none;

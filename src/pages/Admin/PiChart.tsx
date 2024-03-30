@@ -1,7 +1,7 @@
 import AdminSideBar from "../../components/AdminSideBar"
 import { BarChart } from "../../components/chart";
 import "../../styles/doubleBarGraph.scss";
-import Admin_header from "./Admin_header"
+import Admin_header from "../../components/Admin_header"
 
 import { useState } from "react"
 

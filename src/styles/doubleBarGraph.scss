@@ -4,7 +4,7 @@
 .double-bar-graph-container{
    width: 60%;
    min-height: 400px;
-   box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
+  //  box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
    border-radius: 10px;
    padding: 1rem;
    > h4 {
@@ -16,7 +16,7 @@
 #bar-section {
    width: 100%;
    margin: 2rem auto;
-   padding: 1rem;
+   padding: 1.5rem;
    display: flex;
    flex-wrap: wrap;
 
@@ -25,29 +25,33 @@
    margin-top: 0.5rem;
   }
   .bar-div{
-    width: 60%;
-    box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
+    width: 100%;
+    // box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
     border-radius: 10px;
     margin: 1rem 1rem;
     min-width: 200px;
+    padding: 1rem;
+    height : 400px;
 
   }
   .pi-div{
-   width: 40%;
-   box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
+   width: 50%;
+  //  box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
    border-radius: 10px;
    margin: 1rem 1rem;
    padding: 1rem;
    min-width: 200px;
-   max-width: 300px;
+   max-width: calc(100%/2 - 40px);
+   height : 300px;
  }
  .line-div{
    width: 100%;
-   box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
+  //  box-shadow: 0 0 14px 1px hsl(266deg 33% 41% / 15%);
    border-radius: 10px;
    margin: 1rem 1rem;
    padding: 1rem;
    min-width: 200px;
-   max-height: fit-content;
+   height : 25rem;
+
  }
 }

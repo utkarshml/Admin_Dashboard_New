@@ -1,0 +1,84 @@
+.user-manage-heading{
+    margin-bottom : 1rem;
+    text-transform : uppercase;
+    padding: 1.5rem;
+}
+
+.userManageDiv{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .userProfile{
+        width: calc(100%/2 - 10%);
+        height: 400px;
+        img {
+            width: 100%;
+            border-radius: 8px;
+            height: 100%;
+        }
+    }
+    .manage-customer-form{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ height: 400px;
+ div{
+    display: flex;
+    flex-direction: column;
+    label {
+        font-weight: 600;
+        color: hsl(266, 33%, 41%);
+    }
+    input[type="text"] , select ,  input[type="email"]{
+        padding: 0.5rem;
+        border: 2px solid  hsl(266, 50%, 70%);
+        border-radius: 5px;
+        color: black;
+        &:focus{
+           border: 2px solid hsl(266, 33%, 41%);
+           outline: hsl(266, 33%, 41%);
+           
+        }
+    }
+ }
+button{
+    background-color: hsl(266, 33%, 41%);
+    border: none;
+    padding: 0.5rem 0;
+    color:  white;
+    border-radius: 5px; 
+    cursor: pointer;
+    &:hover{
+        background-color: hsl(266, 50%, 70%);
+    }   
+}
+    }
+
+}
+
+.backBtn {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    color:  hsl(266, 33%, 41%);
+   margin-top: 1rem;
+   margin-left:  1rem;
+
+}
+
+@media screen and  (max-width:992px) {
+    .userManageDiv{
+        display: flex;
+        flex-wrap: wrap;
+        .userProfile{
+            width: fit-content;
+            height: 400px;
+            img {
+                object-fit: contain;  
+            }
+        }
+    } 
+    
+}

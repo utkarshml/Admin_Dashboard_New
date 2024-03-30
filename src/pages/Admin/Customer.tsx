@@ -2,9 +2,10 @@
 import { ReactElement, useState } from "react";
 import AdminSideBar from "../../components/AdminSideBar";
 import GetTable from "../../components/Table";
-import Admin_header from "./Admin_header";
+import Admin_header from "../../components/Admin_header";
 import { ColumnDef } from "@tanstack/react-table";
-import ProductManagementBtn from "../../components/ProductManagementBtn";
+import { Link } from "react-router-dom";
+// This element css comes from app.scss
 interface CustomerColTye {
   id : string,
   profile : string,
@@ -69,7 +70,8 @@ const CustomerCol : ColumnDef<CustomerColTye>[] = [
     header : "Action",
     accessorKey : "action",
     cell: () => {
-      return <ProductManagementBtn text="Delete"/>
+      // this element css comes from app.scss
+      return <Link className="user-manage-btn" to={"/admin/customer/user"} children={<span>Manage</span>} />
     },
   },
 ]
@@ -87,15 +89,11 @@ function Customer() {
        <AdminSideBar onClose={onclose} reacted={toggle} />
       <main>
       <Admin_header onClick={Handler} />
-      <div style={{
-        padding: "2rem 1.5rem"
+      <h2 className="customer-heading">Customer</h2>
+      <div  style={{
+        padding: "2rem 1.5rem",
+        overflowX: "auto"
       }}>
-        <h2 style={
-       {
-        marginBottom : "1rem",
-        textTransform : "uppercase"
-       }
-        }>Customer</h2>
         <GetTable isPagination={true} columns={CustomerCol} data={customerData} pageSize={10}/>
       </div>
       </main>
