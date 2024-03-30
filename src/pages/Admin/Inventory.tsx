@@ -69,7 +69,8 @@ function Inventory() {
         <main>
           <Admin_header onClick={Handler}  />
           <div style={{
-            padding: "2rem 1.5rem"
+            padding: "2rem 1.5rem",
+            overflowX : "auto"
           }}>
             <h2 style={
               {

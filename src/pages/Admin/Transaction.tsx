@@ -88,7 +88,7 @@ const Transaction = () => {
         <AdminSideBar onClose={onclose} reacted={toggle} />
         <main>
           <Admin_header onClick={Handler} />
-          <div style={{ padding: "2rem 1.5rem" }}>
+          <div style={{ padding: "2rem 1.5rem"  , overflowX : "auto"}}>
             <h2 style={
               {
                 marginBottom: "1rem",

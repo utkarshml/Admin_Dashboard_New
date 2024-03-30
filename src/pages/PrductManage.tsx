@@ -29,7 +29,7 @@ const sampleOrder : OrderItemType[] = [{
 
 
 const PrductManage  = () => {
-  const [order , setOrder]= useState<OrderItemType[]>(sampleOrder);
+  // const [order , setOrder]= useState<OrderItemType[]>(sampleOrder);
   const[toggle , setToggle] = useState<boolean>(false);
   const [orderInfo , setOrderInfo] = useState<OrderItem>({
     name: "John Doe",
@@ -71,7 +71,7 @@ const statusHandler = () =>{
      
            <section className={styles.ManageSection}>
             <h2 className={styles.heading}>Product Info</h2>
-            {order?.map(i=>(
+            {sampleOrder?.map(i=>(
               <ProductItem key={i._id} name={i.name} image={i.image} price={i.price} qty={i.qty} subtotal={i.subtotal} _id={i._id}/>
             ))}
            </section>
