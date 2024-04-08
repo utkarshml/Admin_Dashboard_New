@@ -4,7 +4,7 @@ import { LuLayoutDashboard } from "react-icons/lu";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { GrTransaction } from "react-icons/gr";
 import { MdInventory2 } from "react-icons/md";
-import { FaChartArea, FaChartPie } from "react-icons/fa";
+import { FaChartArea } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 
 interface useToggleProp {
