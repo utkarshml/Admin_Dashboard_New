@@ -139,7 +139,9 @@ export function LineChart({  dataset_1 , dataset_2 , lable_1 , lable_2 , bgColor
      maintainAspectRatio : false ,
      elements : {
       line : {
-        tension : 0.5
+        tension : 0.5,
+        borderCapStyle : "round"
+      
       }
      },
      plugins: {
@@ -173,11 +175,15 @@ export function LineChart({  dataset_1 , dataset_2 , lable_1 , lable_2 , bgColor
    )
  }
 
+ type datasetPropsForPi = {
+  label : string , data : number[] , backgroundColor : string[] , borderColor?: string[], 
+    borderWidth : number
+  
+ }
+
 export type piProp =  {
   labels : string[],
-  datasets : [{label : string , data : number[] , backgroundColor : string[] , borderColor?: string[], 
-    borderWidth : number
-  }],
+  datasets : datasetPropsForPi[],
 }
 
  export function PiChart({labels, datasets }: piProp) {

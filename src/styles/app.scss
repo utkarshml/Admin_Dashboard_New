@@ -23,6 +23,11 @@ a {
 li {
      list-style: none;
 }
+main {
+    height: 100vh;
+    overflow-y: auto;
+
+}
 
 .primary{
     color: hsl(266, 33%, 41%);

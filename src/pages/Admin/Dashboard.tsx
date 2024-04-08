@@ -59,7 +59,7 @@ const Dashboard = () => {
             margin: "0.5rem 0"
           }}>
               <div className="double-bar-graph-container">
-        <h2 >Revenu & Transaction</h2>
+        <h2 >Products & Sales</h2>
         <BarChart dataset_1={[50,49,100, 78 ,20 , 40 , 60]} dataset_2={[25,4,100,60, 15 , 40 ,50]} bgColor_1=" hsl(266, 33%, 41%)" bgColor_2=" hsl(266, 50%, 70%)" lable_1="Product" lable_2="Sales" labels={label}horizontal={false} />
     </div>
             <CategoryBarContainer />
