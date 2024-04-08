@@ -84,7 +84,36 @@
 
 
 
-
+@media screen and  (max-width:992px) {
+  .dasboard-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    .double-bar-graph-container{
+      width: 100%;
+    }
+    .category-container{
+      width: 100%;
+    }
+    .genderChart{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      
+    }
+    .transaction-table{
+      width: 100%  ;
+  
+    }
+  }
+}
 
 
 

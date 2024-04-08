@@ -5,6 +5,7 @@ import GetTable from "../../components/Table";
 import Admin_header from "../../components/Admin_header";
 import { ColumnDef } from "@tanstack/react-table";
 import { Link } from "react-router-dom";
+import sampleImage from "../../image/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"
 // This element css comes from app.scss
 interface CustomerColTye {
   id : string,
@@ -22,21 +23,13 @@ interface CustomerColTye {
 const customerData : CustomerColTye[] = [{
   id : "1",
   name : "Utkarsh",
-  profile : "https://picsum.photos/200/300" ,
+  profile : sampleImage ,
   gender : "Male",
   role : "User",
   action : <button>Action</button>,
   email : "utkarshjais8957@gmail.com"
 },
-{
-  id : "1",
-  name : "Utkarsh",
-  profile : "https://picsum.photos/200/300",
-  gender : "Male",
-  role : "User",
-  action : <button>Action</button> ,
-  email : "utkarshjais8957@gmail.com"
-}]
+]
 const CustomerCol : ColumnDef<CustomerColTye>[] = [
   {
     header : "Id",

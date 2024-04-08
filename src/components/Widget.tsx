@@ -57,7 +57,7 @@ const WidgestDiv = styled.div`
 `
 interface WidgestProp {
     title : string,
-    num : number,
+    num : string,
     percentage : number,
     trand : number,
     color : string

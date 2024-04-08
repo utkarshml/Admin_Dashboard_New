@@ -20,7 +20,7 @@ function AdminSideBar({reacted , onClose} : useToggleProp) {
       <RxCross2/>
       </div>
       
-        <h2 className="admin-logo primary">Logo. </h2>
+        <h2 className="admin-logo primary">ShopMe. </h2>
         <h5 className="dashboard-heading heading ">Dashboard</h5>
         <ul className="admin-sidebar-ul">
             <Li text="Dashbord" url="/admin/dashboard" location={location} Icon={LuLayoutDashboard}/>
@@ -28,11 +28,11 @@ function AdminSideBar({reacted , onClose} : useToggleProp) {
             <Li text="Inventory" url="/admin/inventory" location={location} Icon={MdInventory2}/>
             <Li text="Transaction" url="/admin/transaction" location={location} Icon={GrTransaction}/>
         </ul>
+        
         <h5 className="chart-heading  heading">Analytics </h5>
         <ul className="admin-sidebar-ul">
             <Li text="charts" url="/admin/chart" location={location} Icon={FaChartArea}/>
-            <Li text="PI Chart" url="/admin/pi" location={location} Icon={FaChartPie}/>
-            
+         
         </ul>
     </aside>
   )

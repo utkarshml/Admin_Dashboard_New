@@ -50,21 +50,21 @@ const Dashboard = () => {
         <main>
           <Admin_header onClick={Handler} />
           <WidgetContainer />
-          <div style={{
+          <div className="dasboard-container" style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
-            gap: "1rem",
+             gap: "1rem",
             margin: "0.5rem 0"
           }}>
               <div className="double-bar-graph-container">
         <h2 >Revenu & Transaction</h2>
-        <BarChart dataset_1={[1,49,50, 70]} dataset_2={[2,4,67,78]} bgColor_1=" hsl(266, 33%, 41%)" bgColor_2=" hsl(266, 50%, 70%)" lable_1="product" lable_2="value" labels={label}horizontal={false} />
+        <BarChart dataset_1={[50,49,100, 78 ,20 , 40 , 60]} dataset_2={[25,4,100,60, 15 , 40 ,50]} bgColor_1=" hsl(266, 33%, 41%)" bgColor_2=" hsl(266, 50%, 70%)" lable_1="Product" lable_2="Sales" labels={label}horizontal={false} />
     </div>
             <CategoryBarContainer />
           </div>
-          <div style={{
+          <div className="dasboard-container"  style={{
             display: "flex",
             justifyContent: "space-evenly",
             alignItems: "center",
@@ -75,11 +75,12 @@ const Dashboard = () => {
               <h2>Gender Ratio</h2>
               <DoughnutGraph style={{
                 innerWidth: 100
-              }} offset={[]} legends={true} cutout={90} labels={["Boy", "Girls"]} doughnutData={[20, 19]} color={[" hsl(266, 33%, 41%)", "hsl(266, 50%, 70%)"]} />
+              }} offset={[]} legends={true} cutout={90} labels={["Boy", "Girls"]} doughnutData={[28, 10]} color={[" hsl(266, 33%, 41%)", "hsl(266, 50%, 70%)"]} />
               <BiMaleFemale />
             </div>
+
             <div className="transaction-table">
-                <GetTable columns={column} data={data}/>
+                <GetTable pageSize={4} columns={column} data={data}/>
             </div>
           </div>
         </main>

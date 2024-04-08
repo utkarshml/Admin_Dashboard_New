@@ -77,3 +77,17 @@ article {
     align-items: start;
     gap: 2rem;
 }
+@media screen and  (max-width:992px) {
+
+    .productList{
+        display: flex;
+        flex-direction:  column;
+        .ManageSection{
+            width: 100%;
+
+        }
+        article {
+            width: 100%;
+        }
+    }
+}

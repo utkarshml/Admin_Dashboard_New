@@ -5,16 +5,16 @@ import Admin_header from "../components/Admin_header";
 import styles from "../styles/userManage.module.scss"
 import { FaArrowLeft } from "react-icons/fa";
 
-
+import sampleImage from "../image/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg";
 
 
 function UserManage() {
   const[toggle , setToggle] = useState<boolean>(false);
   const[name , setName] = useState<string>("Utkarsh");
   const[role , setRole] = useState<string>("Admin");
-  const [gender , setGender] = useState<string>("");
+  const [gender , setGender] = useState<string>("Male");
   const [email , setEmail] = useState<string>("utkarshjais8957@gmail.com");
-  const [image , setImage] = useState<string>("https://picsum.photos/200/300");
+  const [image , setImage] = useState<string>(sampleImage);
   const Handler = () =>{
      setToggle(!toggle);
   }

@@ -37,7 +37,7 @@ const TransactionCol: ColumnDef<TransactionColType>[] = [
     accessorKey: "status",
     cell: ({ cell }) => {
       return <span style={{
-        color: cell.row.getValue("status") === "Completed" ? "green" : cell.row.getValue("status") === "Failed" ? "red" : "orange"
+        color: cell.row.getValue("status") === "Deliverd" ? "green" : cell.row.getValue("status") === "Processing" ? "red" : "orange"
       }}>{cell.row.getValue("status")}</span>
     }
   },
@@ -51,25 +51,25 @@ const TransactionCol: ColumnDef<TransactionColType>[] = [
 ]
 const TranDum: TransactionColType[] = [
   {
-    user: 'User1',
+    user: 'Utkarsh',
     amount: 500,
     discount: 50,
     quantity: 2,
-    status: 'Completed',
+    status: 'Deliverd',
   },
   {
-    user: 'User2',
+    user: 'Avneet',
     amount: 300,
     discount: 30,
     quantity: 1,
-    status: 'Pending',
+    status: 'Shipped',
   },
   {
     user: 'User3',
     amount: 700,
     discount: 70,
     quantity: 3,
-    status: 'Failed',
+    status: 'Processing',
   },
 ];
 

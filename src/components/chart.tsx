@@ -11,11 +11,13 @@ import {
     ArcElement,
     PointElement,
     LineElement,
+    RadialLinearScale,
   } from 'chart.js';
-  import { Bar, Doughnut, Line, Pie } from 'react-chartjs-2';
+  import { Bar, Doughnut, Line, Pie, PolarArea } from 'react-chartjs-2';
   ChartJS.register(
     CategoryScale,
     LinearScale,
+    RadialLinearScale,
     BarElement,
     PointElement,LineElement,
     Title,
@@ -182,6 +184,7 @@ export type piProp =  {
 
     const data : ChartData<"pie", number[], string> = {
      labels,
+  
      datasets,
      
 
@@ -189,6 +192,28 @@ export type piProp =  {
    
    
    return (
-     <Pie options={{maintainAspectRatio : false , responsive : true}} data={data} />
+     <Pie options={{maintainAspectRatio : true , responsive : true , plugins : { legend : {position : 'bottom' as const }}}} data={data} />
    )
  }
+ type dataset = {
+  label : string,
+  data : number[],
+  backgroundColor : string[],
+  borderWidth : number
+ }
+ interface PolarProp {
+  labels : string[],
+  datasets : dataset[]
+ }
+
+ export function PolerChart({ labels , datasets} : PolarProp) {
+
+const data : ChartData<"polarArea" , number[] , string> = {
+    labels,
+    datasets
+  
+  }
+ return (
+    <PolarArea options={{plugins : {legend : {position : 'bottom' as const}}}} data={data} />
+ )
+}

@@ -11,9 +11,9 @@ const Customer = lazy(() => import("./pages/Admin/Customer"));
 const Inventory = lazy(() => import("./pages/Admin/Inventory"));
 const Transaction = lazy(() => import("./pages/Admin/Transaction"))
 const Chartpage = lazy(() => import("./pages/Admin/Chartpage"))
-const PiChart = lazy(() => import("./pages/Admin/PiChart"))
 const UserManage = lazy(() => import("./pages/UserManage"))
 const AddProduct = lazy(() => import("./../src/pages/AddProduct"))
+const ManageProduct = lazy(() => import("./pages/Admin/ManageProduct"))
 const App = () => {
   return (
     <Router>
@@ -31,9 +31,9 @@ const App = () => {
           <Route path="/admin/loader" element={<Loader />} />
           <Route path="/admin/transaction/manage" element={<PrductManage/>}/>
           <Route path="/admin/chart" element={<Chartpage/>}/>
-          <Route path="/admin/pi" element={<PiChart/>}/>
           <Route path="/admin/customer/user" element={<UserManage/>}/>
           <Route path="/admin/inventory/add" element={<AddProduct/>}/>
+          <Route path="/admin/inventory/manage" element={<ManageProduct/>}/>
         </Routes>
 
        </Suspense>

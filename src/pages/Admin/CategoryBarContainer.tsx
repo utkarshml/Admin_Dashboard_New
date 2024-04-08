@@ -14,7 +14,7 @@ const CBC = styled.div`
 function CategoryBarContainer() {
 
   return (
-    <CBC>
+    <CBC className="category-container">
       <h2 style={{textTransform : "uppercase"}}>Inventory</h2>
        <CategoryItem title="Leptop"  percentage={40}/>
        <CategoryItem title="Mobile" percentage={80} />
